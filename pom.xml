@@ -6,7 +6,7 @@
     <artifactId>booster-parent</artifactId>
     <version>23</version>
   </parent>
-  <groupId>dev.snowdrop.example</groupId>
+  <groupId>dev.snowdrop</groupId>
   <artifactId>opentracing</artifactId>
   <version>1.5.19-4-SNAPSHOT</version>
   <name>Spring Boot - Opentracing Example</name>
@@ -31,7 +31,7 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
-        <groupId>dev.snowdrop.example</groupId>
+        <groupId>dev.snowdrop</groupId>
         <artifactId>spring-boot-bom</artifactId>
         <version>${spring-boot-bom.version}</version>
         <type>pom</type>
