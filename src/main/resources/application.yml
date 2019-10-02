@@ -10,4 +10,4 @@ spring:
 opentracing:
   jaeger:
     http-sender:
-      url: http://localhost:14268/api/traces
+      url: http://jaeger-collector-demo.apps-rp.cloudteco.com.ar:14268/api/traces
