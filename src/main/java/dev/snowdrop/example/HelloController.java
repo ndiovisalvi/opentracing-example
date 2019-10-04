@@ -3,6 +3,7 @@ package dev.snowdrop.example;
 import io.opentracing.Tracer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -19,7 +20,11 @@ public class HelloController {
     public String getHostname() {
         return System.getenv("HOSTNAME") == null ? "a local machine" : System.getenv("HOSTNAME") + "pod";
     }
-
+    @GetMapping("/slow-service-tweets")
+    public String testWebclient() {
+        return "Testing WebClient from Spring Boot running on " + getHostname() + " !'";
+    }
+    
     @RequestMapping("/hello")
     public String hello() {
         return "Hello from Spring Boot running on " + getHostname() + " !'";
